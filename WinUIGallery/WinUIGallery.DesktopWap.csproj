@@ -83,7 +83,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="ControlPages\MediaPlayerElementPage.xaml" />
+    <None Remove="Controls\InlineColorPicker.xaml" />
     <None Remove="DataModel\IconsData.json" />
+    <None Remove="DesignGuidancePages\AccessibilityColorContrastPage.xaml" />
+    <None Remove="DesignGuidancePages\AccessibilityKeyboardPage.xaml" />
+    <None Remove="DesignGuidancePages\AccessibilityScreenReaderPage.xaml" />
     <None Remove="DesignGuidancePages\IconsPage.xaml" />
     <Content Remove="@(Content)" />
   </ItemGroup>
@@ -91,6 +95,22 @@
     <Content Include="DataModel\IconsData.json" />
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Controls\InlineColorPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="DesignGuidancePages\AccessibilityColorContrastPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DesignGuidancePages\AccessibilityKeyboardPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DesignGuidancePages\AccessibilityScreenReaderPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
     <Page Update="DesignGuidancePages\IconsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
